@@ -35,7 +35,7 @@ jobs:
           keys: 
             - npm-packages
       - run: npm i
-      - run: npm run analyze
+      - run: npm audit
 # Invoke jobs via workflows
 workflows:
   ci_pipline:
