@@ -17,7 +17,7 @@ jobs:
       - save_cache:
           key: "npm-packages"
           paths:
-            - /src/node_modules
+            - /src/node modules
   test:
     executor: my-executor
     steps:
@@ -25,7 +25,6 @@ jobs:
       - restore_cache:
           keys: 
             - npm-packages
-      - run: npm i
       - run: npm run test
   analyze:
     executor: my-executor
