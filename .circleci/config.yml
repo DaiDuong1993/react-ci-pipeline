@@ -27,11 +27,13 @@ jobs:
             - npm-packages
       - run: npm run test
   analyze:
-    - checkout
-    - restore_cache:
+    executor: my-executor
+    steps:
+      - checkout
+      - restore_cache:
           key: 
             - npm-packages
-    - run: npm run analyze
+      - run: npm run analyze
 # Invoke jobs via workflows
 workflows:
   say-hello-workflow:
