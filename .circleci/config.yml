@@ -36,12 +36,12 @@ jobs:
       - run: npm run analyze
 # Invoke jobs via workflows
 workflows:
-  say-hello-workflow:
+  ci_pipline:
     jobs:
       - build
       - test:
-        requires:
-          - build
+          requires:
+            - build
       - analyze:
-        requires:
-          - test
+          requires:
+            - test
