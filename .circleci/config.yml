@@ -31,7 +31,7 @@ jobs:
     - restore_cache:
           key: 
             - npm-packages
-      - run: npm run analyze
+    - run: npm run analyze
 # Invoke jobs via workflows
 workflows:
   say-hello-workflow:
